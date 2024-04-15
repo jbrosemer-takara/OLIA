@@ -247,6 +247,9 @@ void loop() {
       else if (Serial.peek() == 's'){ //set new output scale factor
         outputScale = Serial.parseFloat(); //ignores s character         
       }
+      else if (Serial.peek() == 't'){ //set new output time
+        outputTime = Serial.parseFloat(); //ignores s character         
+      }
       else if (Serial.peek() == 'h'){ //set first higher harmonic
         firstHigherHarmonic = Serial.parseInt(); //ignores h character  
         lastHigherHarmonic = firstHigherHarmonic + nHarmonics - 1;     

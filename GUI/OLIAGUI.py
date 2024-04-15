@@ -19,6 +19,7 @@ class MainWindow(QtWidgets.QMainWindow):
         self.filterCheckBox.clicked.connect(self.filterToggled)
         self.refResetButton.clicked.connect(self.recalcExtRef)
         self.outputScalingEdit.returnPressed.connect(self.outputScalingChanged)
+        self.outTime.returnPressed.connect(self.outTimeChanged)
         self.harmonicEdit.returnPressed.connect(self.harmonicChanged)
         self.refCheckBox.clicked.connect(self.extRefToggled)
         self.filterOn = False;
@@ -300,6 +301,11 @@ class MainWindow(QtWidgets.QMainWindow):
     def outputScalingChanged(self):
         outputScaling = self.outputScalingEdit.text()
         com.sendCommand(self.port, 's' + outputScaling)
+        app.processEvents()
+
+    def outTimeChanged(self):
+        outTime = self.outTime.text()
+        com.sendCommand(self.port, 't' + outTime)
         app.processEvents()
         
     def harmonicChanged(self):
