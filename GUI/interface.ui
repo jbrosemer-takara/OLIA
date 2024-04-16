@@ -779,9 +779,9 @@
   <widget class="QComboBox" name="timeConstantBox">
    <property name="geometry">
     <rect>
-     <x>411</x>
+     <x>390</x>
      <y>165</y>
-     <width>55</width>
+     <width>75</width>
      <height>22</height>
     </rect>
    </property>
@@ -796,6 +796,21 @@
    <property name="currentIndex">
     <number>5</number>
    </property>
+    <item>
+    <property name="text">
+     <string>0.0001</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>0.001</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>0.003</string>
+    </property>
+   </item>
    <item>
     <property name="text">
      <string>0.01</string>
